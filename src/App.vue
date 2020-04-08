@@ -1,19 +1,26 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div>
+        ...
     </div>
-    <router-view/>
-  </div>
 </template>
 
 <style lang="stylus">
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+    @import '~reset-css'
+
+    body
+        background-color #F8F9FA
+        font-family 'Source Sans Pro', sans-serif
+        font-size 14px
+        font-weight 400
+        box-sizing border-box
 </style>
+
+<script>
+async function mounted() {
+    // TODO: request user account
+}
+
+export default {
+    mounted,
+}
+</script>

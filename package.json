@@ -1,15 +1,20 @@
 {
-  "name": "web",
-  "version": "0.1.0",
-  "private": true,
+  "name": "portyx-web",
+  "description": "Portyx WEB Service",
+  "repository": "git@github.com:iknpx/portyx-web.git",
+  "author": "Iakov Salikov <isalikov@pm.me>",
+  "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "core-js": "^3.6.4",
+    "moment": "^2.24.0",
     "register-service-worker": "^1.7.1",
+    "reset-css": "^5.0.1",
     "vue": "^2.6.11",
     "vue-router": "^3.1.6",
     "vuex": "^3.1.3"

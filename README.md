@@ -1,24 +1,9 @@
-# web
+# portyx-web
 
-## Project setup
-```
-yarn install
-```
+[![Build Status](https://drone.dayler.dev/api/badges/iknpx/portyx-web/status.svg)](https://drone.dayler.dev/iknpx/portyx-web)
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+### Environment
+...
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Development
+...
