@@ -1,6 +1,6 @@
 <template>
     <div>
-        ...
+        {{isLoggedIn}}
     </div>
 </template>
 
@@ -8,19 +8,29 @@
     @import '~reset-css'
 
     body
+        box-sizing border-box
         background-color #F8F9FA
+        color rgba(0, 0, 0, .8)
         font-family 'Source Sans Pro', sans-serif
         font-size 14px
         font-weight 400
-        box-sizing border-box
 </style>
 
 <script>
+import { mapGetters, mapState } from 'vuex'
+
 async function mounted() {
-    // TODO: request user account
+    this.$store.dispatch('account/fetch')
 }
 
 export default {
+    computed: mapState({
+        account: (state) => state.account,
+        ...mapGetters('account', {
+            isLoggedIn: 'isLoggedIn',
+        }),
+    }),
+
     mounted,
 }
 </script>

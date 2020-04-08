@@ -2,12 +2,14 @@ import axios from 'axios'
 
 import ENV from '@/env'
 
+import Session from '@/services/session'
+
 export class Request {
     constructor() {
         this.http = axios.create({
-            baseHost: ENV.host || '/',
+            baseURL: ENV.host || '/',
             headers: {
-                Authorization: '',
+                Authorization: Session.get(),
             },
         })
     }
