@@ -26,6 +26,7 @@ async function mounted() {
 export default {
     computed: mapState({
         account: (state) => state.account,
+
         ...mapGetters('account', {
             isLoggedIn: 'isLoggedIn',
         }),

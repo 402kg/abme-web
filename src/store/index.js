@@ -9,5 +9,4 @@ export default new Vuex.Store({
     modules: {
         account,
     },
-    // plugins: debug ? [createLogger()] : [],
 })
