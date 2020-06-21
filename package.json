@@ -2,6 +2,7 @@
   "name": "abme-web",
   "version": "0.0.0",
   "scripts": {
+    "deploy": "gulp deploy",
     "dist": "webpack --progress --config ./webpack.js",
     "lint": "eslint .",
     "start": "webpack-dev-server --host 0.0.0.0 --config ./webpack.js"
@@ -55,7 +56,7 @@
     "gulp": "^4.0.2",
     "gulp-sftp-up4": "^0.1.8",
     "html-webpack-plugin": "^3.2.0",
-    "husky": "^3.1.0",
+    "husky": "^4.2.5",
     "lint-staged": "^9.5.0",
     "postcss-loader": "^3.0.0",
     "raw-loader": "^2.0.0",
