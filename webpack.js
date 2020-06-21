@@ -14,6 +14,8 @@ const options = {
         modules: ['node_modules', 'src'],
         alias: {
             '@src': path.resolve(__dirname, './src'),
+            '@app': path.resolve(__dirname, './src/app'),
+            '@stylus': path.resolve(__dirname, './src/stylus'),
         },
     },
     resolveLoader: {
@@ -92,6 +94,8 @@ const options = {
         new DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+                API: JSON.stringify(process.env.API),
+                SESSION: JSON.stringify(process.env.SESSION),
             },
         }),
     ],

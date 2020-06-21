@@ -28,10 +28,11 @@ const options = {
         allowedHosts: [
             'localhost',
         ],
+        disableHostCheck: true,
         hot: true,
         hotOnly: true,
         historyApiFallback: true,
-        port: 8000,
+        port: 8080,
     },
 }
 

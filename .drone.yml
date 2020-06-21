@@ -17,6 +17,9 @@ steps:
     image: iknpx/archnode
     environment:
       NODE_ENV: production
+      # TODO: move to host drone envs
+      API: https://api.abme.tk
+      SESSION: abme_app_token
     commands:
       - yarn dist
     when:
