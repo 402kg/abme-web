@@ -1,11 +1,19 @@
-import Vue from 'vue'
+import '@babel/polyfill'
 
-import App from './App.vue'
-import store from './store'
+import React from 'react'
+import { render } from 'react-dom'
+import { hot } from 'react-hot-loader/root'
 
-Vue.config.productionTip = false
+import css from './css.styl'
 
-new Vue({
-    store,
-    render: (_) => _(App),
-}).$mount('#app')
+function AppContainer() {
+    return (
+        <div className={css.container}>
+            #
+        </div>
+    )
+}
+
+const App = hot(AppContainer)
+
+render(<App />, document.querySelector('#root'))

@@ -1,9 +1,14 @@
-# portyx-web
+# abme-web
 
-[![Build Status](https://drone.dayler.dev/api/badges/iknpx/portyx-web/status.svg)](https://drone.dayler.dev/iknpx/portyx-web)
+### Fetures
+- Babel 7
+- Webpack + HMR
+- React 16.*
+- AirBNB ESLint config
+- Stylus preprocessor
 
-### Environment
-...
+### Runnng
+`yarn start` will expose app at `:8000` port
 
-### Development
-...
+### Production build
+`NODE_ENV=production` yarn dist
