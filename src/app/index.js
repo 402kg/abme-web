@@ -8,6 +8,7 @@ import React, {
 
 import { render } from 'react-dom'
 import { hot } from 'react-hot-loader/root'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import css from './css.styl'
 import useAccountReducer from './useAccountReducer'
@@ -36,17 +37,19 @@ function AppContainer() {
                     <Loading />
                 )}
 
-                {account.isDone && !account.isFetching && !account.isLoggedIn && (
-                    <Suspense fallback={<Loading />}>
-                        <Public />
-                    </Suspense>
-                )}
+                <Router>
+                    {account.isDone && !account.isFetching && !account.isLoggedIn && (
+                        <Suspense fallback={<Loading />}>
+                            <Public />
+                        </Suspense>
+                    )}
 
-                {account.isDone && !account.isFetching && account.isLoggedIn && (
-                    <Suspense fallback={<Loading />}>
-                        <Home />
-                    </Suspense>
-                )}
+                    {account.isDone && !account.isFetching && account.isLoggedIn && (
+                        <Suspense fallback={<Loading />}>
+                            <Home />
+                        </Suspense>
+                    )}
+                </Router>
             </div>
         </Provider>
     )
